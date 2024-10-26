@@ -47,19 +47,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = C:\Users\HappyMorning\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe
+CMAKE_COMMAND = D:\Program_Files\CLion\bin\cmake\win\x64\bin\cmake.exe
 
 # The command to remove a file.
-RM = C:\Users\HappyMorning\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -E rm -f
+RM = D:\Program_Files\CLion\bin\cmake\win\x64\bin\cmake.exe -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\CLionProjects\CAN_test
+CMAKE_SOURCE_DIR = D:\SJTU\RM\Projects\CAN_test
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\CLionProjects\CAN_test\cmake-build-debug-mingw-stm32
+CMAKE_BINARY_DIR = D:\SJTU\RM\Projects\CAN_test\cmake-build-debug-mingw-stm32
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -67,7 +67,7 @@ CMAKE_BINARY_DIR = C:\CLionProjects\CAN_test\cmake-build-debug-mingw-stm32
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "No interactive CMake dialog available..."
-	C:\Users\HappyMorning\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -E echo "No interactive CMake dialog available."
+	D:\Program_Files\CLion\bin\cmake\win\x64\bin\cmake.exe -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -77,7 +77,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake to regenerate build system..."
-	C:\Users\HappyMorning\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	D:\Program_Files\CLion\bin\cmake\win\x64\bin\cmake.exe --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\CLionProjects\CAN_test\cmake-build-debug-mingw-stm32\CMakeFiles C:\CLionProjects\CAN_test\cmake-build-debug-mingw-stm32\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\SJTU\RM\Projects\CAN_test\cmake-build-debug-mingw-stm32\CMakeFiles D:\SJTU\RM\Projects\CAN_test\cmake-build-debug-mingw-stm32\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\CLionProjects\CAN_test\cmake-build-debug-mingw-stm32\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\SJTU\RM\Projects\CAN_test\cmake-build-debug-mingw-stm32\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -223,6 +223,54 @@ Core/Src/main.s: Core/Src/main.c.s
 Core/Src/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\CAN_test.elf.dir\build.make CMakeFiles/CAN_test.elf.dir/Core/Src/main.c.s
 .PHONY : Core/Src/main.c.s
+
+Core/Src/motor.obj: Core/Src/motor.cpp.obj
+.PHONY : Core/Src/motor.obj
+
+# target to build an object file
+Core/Src/motor.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CAN_test.elf.dir\build.make CMakeFiles/CAN_test.elf.dir/Core/Src/motor.cpp.obj
+.PHONY : Core/Src/motor.cpp.obj
+
+Core/Src/motor.i: Core/Src/motor.cpp.i
+.PHONY : Core/Src/motor.i
+
+# target to preprocess a source file
+Core/Src/motor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CAN_test.elf.dir\build.make CMakeFiles/CAN_test.elf.dir/Core/Src/motor.cpp.i
+.PHONY : Core/Src/motor.cpp.i
+
+Core/Src/motor.s: Core/Src/motor.cpp.s
+.PHONY : Core/Src/motor.s
+
+# target to generate assembly for a file
+Core/Src/motor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CAN_test.elf.dir\build.make CMakeFiles/CAN_test.elf.dir/Core/Src/motor.cpp.s
+.PHONY : Core/Src/motor.cpp.s
+
+Core/Src/pid.obj: Core/Src/pid.cpp.obj
+.PHONY : Core/Src/pid.obj
+
+# target to build an object file
+Core/Src/pid.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CAN_test.elf.dir\build.make CMakeFiles/CAN_test.elf.dir/Core/Src/pid.cpp.obj
+.PHONY : Core/Src/pid.cpp.obj
+
+Core/Src/pid.i: Core/Src/pid.cpp.i
+.PHONY : Core/Src/pid.i
+
+# target to preprocess a source file
+Core/Src/pid.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CAN_test.elf.dir\build.make CMakeFiles/CAN_test.elf.dir/Core/Src/pid.cpp.i
+.PHONY : Core/Src/pid.cpp.i
+
+Core/Src/pid.s: Core/Src/pid.cpp.s
+.PHONY : Core/Src/pid.s
+
+# target to generate assembly for a file
+Core/Src/pid.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CAN_test.elf.dir\build.make CMakeFiles/CAN_test.elf.dir/Core/Src/pid.cpp.s
+.PHONY : Core/Src/pid.cpp.s
 
 Core/Src/stm32f4xx_hal_msp.obj: Core/Src/stm32f4xx_hal_msp.c.obj
 .PHONY : Core/Src/stm32f4xx_hal_msp.obj
@@ -757,6 +805,12 @@ help:
 	@echo ... Core/Src/main.obj
 	@echo ... Core/Src/main.i
 	@echo ... Core/Src/main.s
+	@echo ... Core/Src/motor.obj
+	@echo ... Core/Src/motor.i
+	@echo ... Core/Src/motor.s
+	@echo ... Core/Src/pid.obj
+	@echo ... Core/Src/pid.i
+	@echo ... Core/Src/pid.s
 	@echo ... Core/Src/stm32f4xx_hal_msp.obj
 	@echo ... Core/Src/stm32f4xx_hal_msp.i
 	@echo ... Core/Src/stm32f4xx_hal_msp.s

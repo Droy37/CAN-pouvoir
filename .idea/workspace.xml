@@ -23,7 +23,164 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d402874e-b096-4388-a20e-a9dc663c836a" name="Changes" comment="" />
+    <list default="true" id="fb241501-e04e-47f0-8f5b-8523c9089d10" name="Changes" comment="add pid control">
+      <change afterPath="$PROJECT_DIR$/Core/Src/motor.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/Src/motor.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/Src/pid.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/Src/pid.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CAN_test.ioc" beforeDir="false" afterPath="$PROJECT_DIR$/CAN_test.ioc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Inc/main.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/main.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Inc/stm32f4xx_it.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/stm32f4xx_it.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/callback.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/callback.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/gpio.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/gpio.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/stm32f4xx_it.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/stm32f4xx_it.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/CAN_test.uvguix.HappyMorning" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/CAN_test.uvguix.HappyMorning" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/CAN_test.uvoptx" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/CAN_test.uvoptx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/CAN_test.uvprojx" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/CAN_test.uvprojx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/CAN_test/CAN_test.axf" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/CAN_test/CAN_test.axf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/CAN_test/CAN_test.build_log.htm" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/CAN_test/CAN_test.build_log.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/CAN_test/CAN_test.hex" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/CAN_test/CAN_test.hex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/CAN_test/CAN_test.htm" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/CAN_test/CAN_test.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/CAN_test/CAN_test.lnp" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/CAN_test/CAN_test.lnp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/CAN_test/CAN_test.map" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/CAN_test/CAN_test.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/CAN_test/CAN_test_CAN_test.dep" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/CAN_test/CAN_test_CAN_test.dep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/CAN_test/callback.d" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/CAN_test/callback.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/CAN_test/callback.o" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/CAN_test/callback.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/CAN_test/can.d" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/CAN_test/can.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/CAN_test/can.o" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/CAN_test/can.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/CAN_test/gpio.d" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/CAN_test/gpio.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/CAN_test/gpio.o" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/CAN_test/gpio.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/CAN_test/main.d" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/CAN_test/main.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/CAN_test/main.o" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/CAN_test/main.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal.d" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal.o" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_can.d" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_can.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_can.o" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_can.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_cortex.d" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_cortex.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_cortex.o" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_cortex.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_dma.d" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_dma.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_dma.o" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_dma.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_dma_ex.d" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_dma_ex.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_dma_ex.o" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_dma_ex.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_exti.d" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_exti.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_exti.o" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_exti.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_flash.d" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_flash.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_flash.o" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_flash.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_flash_ex.d" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_flash_ex.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_flash_ex.o" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_flash_ex.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_flash_ramfunc.d" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_flash_ramfunc.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_gpio.d" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_gpio.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_gpio.o" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_gpio.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_msp.d" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_msp.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_msp.o" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_msp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_pwr.d" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_pwr.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_pwr.o" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_pwr.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_pwr_ex.d" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_pwr_ex.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_pwr_ex.o" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_pwr_ex.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_rcc.d" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_rcc.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_rcc.o" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_rcc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_rcc_ex.d" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_rcc_ex.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_rcc_ex.o" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_rcc_ex.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_tim.d" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_tim.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_tim_ex.d" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_hal_tim_ex.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_it.d" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_it.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_it.o" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/CAN_test/stm32f4xx_it.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/CAN_test/system_stm32f4xx.d" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/CAN_test/system_stm32f4xx.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/CAN_test/system_stm32f4xx.o" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/CAN_test/system_stm32f4xx.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/.cmake/api/v1/reply/cache-v2-49a42088d355f8035c2b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/.cmake/api/v1/reply/cmakeFiles-v1-20a85726f40ed7734d69.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/.cmake/api/v1/reply/codemodel-v2-07b40503fbdbf0abc543.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/.cmake/api/v1/reply/index-2024-10-12T07-38-17-0693.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/.cmake/api/v1/reply/target-CAN_test.elf-Debug-411f3a23d60ffa5c526f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/.cmake/api/v1/reply/toolchains-v1-63febd2a7762cc58ebb9.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/3.29.6/CMakeASMCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/3.29.6/CMakeASMCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/3.29.6/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/3.29.6/CMakeCCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/3.29.6/CMakeCXXCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/3.29.6/CMakeCXXCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/3.29.6/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/3.29.6/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/3.29.6/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/3.29.6/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/3.29.6/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/3.29.6/CMakeSystem.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/ASM.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/ASM.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Core/Src/callback.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Core/Src/callback.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Core/Src/callback.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Core/Src/callback.cpp.obj.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Core/Src/can.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Core/Src/can.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Core/Src/can.c.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Core/Src/can.c.obj.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Core/Src/gpio.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Core/Src/gpio.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Core/Src/gpio.c.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Core/Src/gpio.c.obj.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Core/Src/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Core/Src/main.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Core/Src/main.c.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Core/Src/main.c.obj.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Core/Src/stm32f4xx_it.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Core/Src/stm32f4xx_it.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Core/Src/stm32f4xx_it.c.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Core/Src/stm32f4xx_it.c.obj.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Core/Src/syscalls.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Core/Src/syscalls.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Core/Src/syscalls.c.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Core/Src/syscalls.c.obj.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Core/Src/sysmem.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Core/Src/sysmem.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Core/Src/sysmem.c.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Core/Src/sysmem.c.obj.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Core/Src/system_stm32f4xx.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Core/Src/system_stm32f4xx.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Core/Src/system_stm32f4xx.c.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Core/Src/system_stm32f4xx.c.obj.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Core/Startup/startup_stm32f427iihx.s.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Core/Startup/startup_stm32f427iihx.s.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.obj.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/compiler_depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CAN_test.elf.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/Progress/1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/Progress/27" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/Progress/4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/Progress/count.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/clion-Debug-MinGW-STM32-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/clion-Debug-MinGW-STM32-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-mingw-stm32/cmake_install.cmake" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,6 +190,21 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug-MinGW-STM32" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Droy37&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:Droy37/CAN-pouvoir.git&quot;,
+    &quot;accountId&quot;: &quot;0799f7b5-ceeb-4201-9252-75949b97f747&quot;
+  }
+}</component>
   <component name="ProjectApplicationVersion">
     <option name="ide" value="CLion" />
     <option name="majorVersion" value="2024" />
@@ -40,21 +212,25 @@
     <option name="productBranch" value="Classic" />
   </component>
   <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 3
 }</component>
-  <component name="ProjectId" id="2nKKVmY1IbkhEQTSY0L7x5JWQxM" />
+  <component name="ProjectId" id="2nNyscN7euCi790hhsJ9MgXVe0I" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "OpenOCD Download & Run.CAN_test.elf.executor": "Run",
     "RunOnceActivity.RadMigrateCodeStyle": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "D:/SJTU/RM/Projects/CAN_test",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -64,6 +240,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\SJTU\RM\Projects\CAN_test\Core\Inc" />
+    </key>
+  </component>
   <component name="RunManager" selected="OpenOCD Download &amp; Run.CAN_test.elf">
     <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
@@ -75,8 +256,8 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CAN_test.elf" type="com.jetbrains.cidr.embedded.openocd.conf.type" factoryName="com.jetbrains.cidr.embedded.openocd.conf.factory" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CAN_test" TARGET_NAME="CAN_test.elf" CONFIG_NAME="Debug" version="1" RUN_TARGET_PROJECT_NAME="CAN_test" RUN_TARGET_NAME="CAN_test.elf">
-      <openocd version="1" gdb-port="3333" telnet-port="4444" board-config="C:\ST\STlink.cfg" reset-type="INIT" download-type="UPDATED_ONLY">
+    <configuration name="CAN_test.elf" type="com.jetbrains.cidr.embedded.openocd.conf.type" factoryName="com.jetbrains.cidr.embedded.openocd.conf.factory" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CAN_test" TARGET_NAME="CAN_test.elf" CONFIG_NAME="Debug-MinGW-STM32" version="1" RUN_TARGET_PROJECT_NAME="CAN_test" RUN_TARGET_NAME="CAN_test.elf">
+      <openocd version="1" gdb-port="3333" telnet-port="4444" board-config="D:\STlink.cfg" reset-type="INIT" download-type="UPDATED_ONLY">
         <debugger kind="GDB" isBundled="true" />
       </openocd>
       <method v="2">
@@ -91,12 +272,14 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d402874e-b096-4388-a20e-a9dc663c836a" name="Changes" comment="" />
-      <created>1728716353972</created>
+      <changelist id="fb241501-e04e-47f0-8f5b-8523c9089d10" name="Changes" comment="" />
+      <created>1728828039457</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1728716353972</updated>
-      <workItem from="1728716355585" duration="6164000" />
+      <updated>1728828039457</updated>
+      <workItem from="1728828042999" duration="70000" />
+      <workItem from="1728961312666" duration="11000" />
+      <workItem from="1729922165834" duration="16038000" />
     </task>
     <servers />
   </component>
@@ -107,5 +290,20 @@
     <isAutomaticCheckingOnLaunch value="false" />
     <isAutomaticFoundErrors value="true" />
     <isAutomaticReloadCMake value="true" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add pid control" />
+    <option name="LAST_COMMIT_MESSAGE" value="add pid control" />
   </component>
 </project>

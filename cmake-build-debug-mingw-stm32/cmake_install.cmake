@@ -1,4 +1,4 @@
-# Install script for directory: C:/CLionProjects/CAN_test
+# Install script for directory: D:/SJTU/RM/Projects/CAN_test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/CLionProjects/CAN_test/cmake-build-debug-mingw-stm32/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/SJTU/RM/Projects/CAN_test/cmake-build-debug-mingw-stm32/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

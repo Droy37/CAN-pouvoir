@@ -55,21 +55,16 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+//float current_;
+//float temp_;
+
 uint8_t rx_data[8];
-uint8_t tx_data[8] = {0x00, 0x00, 0x00, 0x77, 0x00, 0x00, 0x00, 0x00};
-uint32_t TxMailbox = CAN_TX_MAILBOX0;
+uint8_t tx_data[10] = {0x00};
 
-CAN_RxHeaderTypeDef rx_header;
-CAN_TxHeaderTypeDef tx_header;
+
 CAN_FilterTypeDef FilterConfig = {0, 0, 0, 0, CAN_FILTER_FIFO0, 14, CAN_FILTERMODE_IDMASK, CAN_FILTERSCALE_32BIT, ENABLE};
-CAN_TxHeaderTypeDef TxHeader ={0x200,0,CAN_ID_STD,CAN_RTR_DATA, 8, DISABLE};
 
-//HAL_StatusTypeDef HAL_CAN_ConfigFilter(CAN_HandleTypeDef *hcan, CAN_FilterTypeDef *sFilterConfig);
-//HAL_StatusTypeDef HAL_CAN_Start(CAN_HandleTypeDef *hcan);
-//HAL_StatusTypeDef HAL_CAN_ActivateNotification(CAN_HandleTypeDef *hcan, uint32_t ActiveITs);
-
-
-
+CAN_RxHeaderTypeDef RxHeader; 
 
 /* USER CODE END 0 */
 
@@ -77,6 +72,8 @@ CAN_TxHeaderTypeDef TxHeader ={0x200,0,CAN_ID_STD,CAN_RTR_DATA, 8, DISABLE};
   * @brief  The application entry point.
   * @retval int
   */
+
+
 int main(void)
 {
 
@@ -108,16 +105,15 @@ int main(void)
   HAL_CAN_Start(&hcan1);
   HAL_CAN_ActivateNotification(&hcan1, CAN_IT_RX_FIFO0_MSG_PENDING);
 
-
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+
     /* USER CODE END WHILE */
-    HAL_CAN_AddTxMessage(&hcan1, &TxHeader, tx_data, &TxMailbox);
-    HAL_Delay(1000);
+
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
