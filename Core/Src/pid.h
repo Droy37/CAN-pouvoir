@@ -13,6 +13,6 @@ public:
     float err_,err_sum_, last_err_;
     float pout_, iout_, dout_;
 };
-extern PID pid;
+extern PID pid_vit, pid_pos;
 
 #endif //PID_H

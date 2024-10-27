@@ -2,7 +2,7 @@
 #define MOTOR_H
 #include <cstdint>
 
-class M3508_Motor{
+class Motor{
 public:
     float ratio_; // 电机减速比
 
@@ -19,7 +19,7 @@ public:
     float temp_; // °C 反馈电机温度
 
     // 构造函数
-    M3508_Motor():
+    Motor():
         ratio_(-36),
         angle_(0.0),
         delta_angle_(0.0),
@@ -42,9 +42,11 @@ public:
 
     // 报文解析函数
     void canRxMsgCallback_v1(uint8_t rx_data[8]);
+    void canRxMsgCallback_v2(uint8_t rx_data[8]);
+    void canRxMsgCallback_v3(uint8_t rx_data[8]);
 };
 
-extern M3508_Motor motor;
+extern Motor motor;
 
 
 

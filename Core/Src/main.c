@@ -59,8 +59,8 @@ void SystemClock_Config(void);
 //float temp_;
 
 uint8_t rx_data[8];
-uint8_t tx_data[10] = {0x00};
-
+uint8_t tx_data[8] = {0x00};
+float ref = 60;
 
 CAN_FilterTypeDef FilterConfig = {0, 0, 0, 0, CAN_FILTER_FIFO0, 14, CAN_FILTERMODE_IDMASK, CAN_FILTERSCALE_32BIT, ENABLE};
 
@@ -109,7 +109,8 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  while (1)
+
+while (1)
   {
 
     /* USER CODE END WHILE */
